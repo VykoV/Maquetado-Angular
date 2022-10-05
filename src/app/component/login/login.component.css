@@ -1,0 +1,11 @@
+/*
+c{
+    background: #00111B;
+}
+*/
+
+.imagenlogo{
+    background-image: url(../../../assets/img/1218911.jpg) ;
+    background-position: center center;    
+    background-size: cover;
+}
