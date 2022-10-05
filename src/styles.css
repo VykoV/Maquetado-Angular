@@ -7,6 +7,7 @@
 
 .BG{
     background: #00111B;
+    
 }
 
 
@@ -41,15 +42,6 @@ p {
     text-align: left;
     margin-top: 5px;
     color: #a7a9be;
-}
-
-h1, h2, h3, h4, h5, h6{
-    color: white;
-    margin-top: 5px;
-}
-
-label{
-    color:white;
 }
 
 #message{
