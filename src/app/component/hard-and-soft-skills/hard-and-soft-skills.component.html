@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container"  >
     <!-- Progress -->
-    <div class="row m-5">
+    <div class="row m-5"   >
         <h3>Hard & Soft Skills</h3>
     
         <div class="col">
@@ -8,67 +8,42 @@
         <!--FrontEnd-->
             <h3>FrontEnd</h3>
             
-            <h4 >HTML</h4>
-            <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4>CSS</h4>
-            <div class="progress">
-                <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4>Javascript</h4>
-            <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            
-            <h4>Bootstrap</h4>
-            <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Avanzado</div>
-            </div>
+            <ul class="Moditems">
+                <li *ngFor="let sfe of skillFrontEnd">
+                    <h4><i class={{sfe.skillFrontEnd.icono}}></i> {{sfe.skillFrontEnd.nombreFrontEnd}}</h4>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Success example" [style.width]=" sfe.skillFrontEnd.porcentaje +'%'" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{sfe.skillFrontEnd.nivelFrontEnd}}</div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
     <!-- BackEnd-->
         <div class="col">
             <h3>BackEnd</h3>
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
+            <ul class="Moditems">
+                <li *ngFor="let sbe of skillBackEnd">
+                    <h4><i class={{sbe.skillBackEnd.icono}}></i> {{sbe.skillBackEnd.nombreBackEnd}}</h4>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Success example" [style.width]=" sbe.skillBackEnd.porcentaje +'%' " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{sbe.skillBackEnd.nivelBackEnd}}</div>
+                    </div>
+                </li>
+            </ul>
             
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
         </div>
 
     <!-- Soft Skills -->
-        <div class="col">
-            <h3>Soft Skills</h3>
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
+        <div class="col" >
             
-            <h4> ... </h4>
-            <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
+            <h3>Soft Skills</h3>
+            <ul class="Moditems">
+                <li *ngFor="let ss of softSkill">
+                    <h4><i class={{ss.softSkill.icono}}></i> {{ss.softSkill.nombreSkill}}</h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" [style.width]=" ss.softSkill.porcentaje +'%'" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ss.softSkill.nivelSkill}}</div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

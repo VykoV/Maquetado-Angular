@@ -1,50 +1,72 @@
-.header{
-    background: #00111B;
-    
-}
-.main{
-    background: #00111B;
+.light-theme{
+    --imgArgProg: 'assets/img/APLogo-20-20-min.png';
+    --background-color: #fffffe;
+    --text-color: #1a1a1a;
+    --Proyecto-color: #f8faff;
+    --button-color: #fffffe;
+
+    --nav-color:#fffffe; 
 }
 
+.dark-theme{
+    --imgArgProg: 'assets/img/arg-programa';
+    --background-color: #0f0e17 ;
+    --text-color: #f5f5f5;
+    --Proyecto-color: #353535;
+    --button-color: #1a1a1a;
+
+    --nav-color:#151420; 
+}
+
+#modebg {
+    background-color: var(--nav-color);
+
+}
+#modetex, #ig, #gh ,#login ,#modebtn {
+    color: var(--text-color);
+    
+}
 .BG{
-    background: #00111B;
-    
+    background-color: var(--background-color);
+}
+#BGLogin{
+    background-color: var(--background-color);
 }
 
 
-.header .navbar {
-    /*background-color: transparent !important;*/
-    
-    left:0%;
-    top: 0%;
-    width: 100%;
-}
-
-#banner{
-    background: url(src/assets/img/1218911.jpg) ;
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-size:100% ;
-    padding-bottom: 40rem;
-}
-
-#FotoPerfil{
-    padding-top: 2rem;
-    text-align: center;
-    /*text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000;*/
-}
-
-/* Para que tenga un espacio falso el banner */
-.main{
-    padding-top: 10rem;
+h1, h2, h3, h4, h5, h6, label{
+    color:var(--text-color);
+    margin-top: 5px;
 }
 
 p {
+    color:var(--text-color);
     text-align: left;
     margin-top: 5px;
     color: #a7a9be;
 }
 
+#Proyectocolor1{
+    background-color: var(--Proyecto-color);
+}
+#Proyectocolor2{
+    background-color: var(--Proyecto-color);
+}
+#Proyectocolor3{
+    background-color: var(--Proyecto-color);
+
+}
+
 #message{
     resize: none;
+}
+
+.toggle{
+    color:var(--button-color);
+}
+
+.Moditems{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

@@ -1,59 +1,45 @@
 
-<header class="header">
-    <!--Barra de navegacion-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark position-fixed fixed-top">
+<header class="header" >
+    
+  <nav class="navbar navbar-expand-lg navbar-dark position-fixed fixed-top" id="modebg">
+    <div id="nav" class="container-fluid">
       
-      <div class="container-fluid">
-        <!--   Icono de ARProg en Nav   -->
-        <div class="container">
-          <a class="navbar-brand" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
-            <img src="assets/img/APLogo-20-20.png" alt="ArgentinaPrograma" width="100" height="60"></a>
-        </div>
-        
-        <!--   Menu Navegacion  -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <!--   Iconos de Redes Sociales en Nav   -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          
-          <ul class="navbar-nav">
-            <!--   Icono instagram poner link  -->
-            <li class="nav-item">
-              <a class="nav-link" href="#"><svg class="bi text-white" width="16" height="16" fill="currentColor">
-                <use xlink:href="assets\libs\bootstrap-icons-1.9.1\bootstrap-icons-1.9.1\bootstrap-icons.svg#instagram"/>
-              </svg></a>
+      <div class="navbar-brand" id="modetex" >
+        <a href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
+          <img src="assets/img/APLogo-20-20-min.png" alt="ArgentinaPrograma" width="100" > </a>
+        <span id="YoProgramo">#YoProgramo</span>
+      </div>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav ms-auto">
+            <!--   Instagram   -->
+            <li class="nav-item" >
+              <a class="nav-link active" id="ig" href="https://instagram.com/vallivictoria?igshid=YmMyMTA2M2Y=">Instagram</a>
             </li>
-            <!--   Icono GitHub   -->
+            <!--   GitHub   -->
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/VykoV"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi text-white" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg></a>
+              <a class="nav-link active" id="gh" href="https://github.com/VykoV">GitHub</a>
             </li>
             <!--   Login   -->
             <li class="nav-item">
-              <a class="nav-link active" href="login.html">Login</a>
+              <a class="nav-link active" id="login" href="/Login">Login</a>
             </li>
             <!--   Icono Cambiar modo nocturno toggle-off/on-->
+            
             <li class="nav-item">
-              <a class="nav-link" href="#"><svg class="bi text-white" width="16" height="16" fill="currentColor">
-                <use xlink:href="assets\libs\bootstrap-icons-1.9.1\bootstrap-icons-1.9.1\bootstrap-icons.svg#toggle-on"/>
-              </svg></a>
+              <button type="btn" class="btn" id="modebtn arg" (click)="switchTheme()" >
+                {{theme === "light-theme" ? "Modo oscuro" : "Modo claro"}}
+              </button>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
-  
-    <!--   banner    -->
-    <div id="banner" class="conteiner"></div>
-  
-    <div id="FotoPerfil" class="container">
-      
-      <img src="assets/img/pngegg.png" height=250px width=250px>
-      <h1 >Victoria Valli</h1>
-      <h2 >Full stack Developer Jr</h2>
-    </div>
-    
+
+  </nav>
   </header>
+
+  

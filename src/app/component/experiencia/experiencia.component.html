@@ -1,12 +1,31 @@
-<div class="container">
+<div class="container ">
     <div class="row m-5">
         <div class="col-lg-6">
-            <h3 >Experiencia</h3>
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nulla accusantium laborum obcaecati hic, laudantium maiores magni cupiditate fuga ab deserunt porro! Des
+            <h3>Experiencia</h3>
+            <ul class="Moditems">
+                <li *ngFor="let Experiencia of experienciaLista">
+                    <img [src]="Experiencia.imgEmpresa"/>
+                    <p>{{Experiencia.nombreEmpresa}}</p>
+                    <p>{{Experiencia.puesto}}</p>
+                    <p>{{Experiencia.periodoPuestoInicio}}</p>
+                    <p>{{Experiencia.periodoPuestoFin}}</p>
+                    <p>{{Experiencia.descripcionPuesto}}</p>
+                </li>
+            </ul>
         </div>
+
         <div class="col-lg-6">
-            <h3 >Educación</h3>
-            <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis nulla accusantium laborum obcaecati hic, laudantium maiores magni cupiditate fuga ab deserunt porro! Deserunt magnam
+            <h3>Educacion</h3>
+            <ul class="Moditems">
+                <li *ngFor="let educacion of educacionLista">
+                    <img [src]="educacion.logo"/>
+                    <p>{{educacion.nombreCurso}}</p>
+                    <p>{{educacion.carrera_curso}}</p>
+                    <p>{{educacion.titulo}}</p>
+                    <p>{{educacion.periodoEstudiosInicio}}</p>
+                    <p>{{educacion.periodoEstudiosFin3}}</p>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

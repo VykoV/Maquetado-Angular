@@ -3,22 +3,21 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { Subscription } from 'rxjs';
 import { Observable } from 'rxjs';
 
-
 @Component({
-  selector: 'app-experiencia',
-  templateUrl: './experiencia.component.html',
-  styleUrls: ['./experiencia.component.css']
+  selector: 'app-banner',
+  templateUrl: './banner.component.html',
+  styleUrls: ['./banner.component.css']
 })
-export class ExperienciaComponent implements OnInit {
-  
-  educacionLista:any;
-  experienciaLista:any;
+export class BannerComponent implements OnInit {
+
+  miporfolio:any;
+
   constructor(private datosPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      this.educacionLista=data.educacion;
-      this.experienciaLista=data.experiencia;
+      this.miporfolio=data;
     });
   }
 }
+

@@ -1,0 +1,14 @@
+#banner{
+    background: url(src/assets/img/1218911.jpg) ;
+    background-repeat:no-repeat;
+    background-size:100% ;
+    padding-bottom: 45rem;
+
+}
+
+#FotoPerfil{
+
+    background-position: center center;    
+    background-size: cover;
+    text-align: center;
+}
