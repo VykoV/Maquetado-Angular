@@ -1,9 +1,12 @@
 #banner{
+    margin-top: 55px;
     background: url(src/assets/img/1218911.jpg) ;
     background-repeat:no-repeat;
-    background-size:100% ;
-    padding-bottom: 45rem;
-
+    background-position: center center;  
+    background-size: cover;
+    padding-bottom: 50%;
+    min-height: 400px;
+    
 }
 
 #FotoPerfil{

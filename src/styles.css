@@ -5,7 +5,7 @@
     --Proyecto-color: #f8faff;
     --button-color: #fffffe;
 
-    --nav-color:#fffffe; 
+    
 }
 
 .dark-theme{
@@ -14,23 +14,23 @@
     --text-color: #f5f5f5;
     --Proyecto-color: #353535;
     --button-color: #1a1a1a;
-
-    --nav-color:#151420; 
+ 
 }
 
 #modebg {
     background-color: var(--nav-color);
 
 }
-#modetex, #ig, #gh ,#login ,#modebtn {
-    color: var(--text-color);
-    
+
+#modebtn{
+    color: white;
 }
+
 .BG{
     background-color: var(--background-color);
 }
 #BGLogin{
-    background-color: var(--background-color);
+    background-color: var(--Proyecto-color);
 }
 
 

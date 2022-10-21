@@ -13,11 +13,11 @@
     "experiencia":[ 
         {
             "idExperiencia": 0,
-            "imgEmpresa":"#",
-            "nombreEmpresa":"Lalalalala",
-            "puesto": "/",
-            "periodoPuestoInicio": "/",
-            "periodoPuestoFin": "/",
+            "imgEmpresa":"...",
+            "nombreEmpresa":"Nombre Empresa",
+            "puesto": "Nombre Puesto",
+            "periodoPuestoInicio": "Periodo Puesto Inicio",
+            "periodoPuestoFin": "Periodo Puesto Fin",
             "descripcionPuesto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nulla accusantium laborum obcaecati hic, laudantium maiores magni cupiditate fuga ab deserunt porro!"
         }
     ],
@@ -25,12 +25,12 @@
     "educacion":[ 
         {
             "idEducacion": 0,
-            "logo": "#",
-            "nombreCurso":"/",
-            "carrera_curso":"/",
-            "titulo": "/",
-            "periodoEstudiosInicio":"/",
-            "periodoEstudiosFin":"/"
+            "logo": "...",
+            "nombreCurso":" Nombre Curso",
+            "carrera_curso":" Carrera curso",
+            "titulo": "Titulo",
+            "periodoEstudiosInicio":"Periodo Puesto Inicio",
+            "periodoEstudiosFin":"Periodo Puesto Fin"
         }
     ],
 
