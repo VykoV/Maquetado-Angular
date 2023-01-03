@@ -1,12 +1,12 @@
+
 .light-theme{
     --imgArgProg: 'assets/img/APLogo-20-20-min.png';
     --background-color: #fffffe;
     --text-color: #1a1a1a;
     --Proyecto-color: #f8faff;
     --button-color: #fffffe;
-
-    
-}
+    --pharagraph:#2d334a;
+}   
 
 .dark-theme{
     --imgArgProg: 'assets/img/arg-programa';
@@ -14,7 +14,8 @@
     --text-color: #f5f5f5;
     --Proyecto-color: #353535;
     --button-color: #1a1a1a;
- 
+    --pharagraph: #a7a9be;
+    
 }
 
 #modebg {
@@ -43,7 +44,7 @@ p {
     color:var(--text-color);
     text-align: left;
     margin-top: 5px;
-    color: #a7a9be;
+    color: var(--pharagraph);
 }
 
 #Proyectocolor1{

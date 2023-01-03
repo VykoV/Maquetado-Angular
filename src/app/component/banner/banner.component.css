@@ -1,13 +1,14 @@
-#banner{
-    margin-top: 55px;
-    background: url(src/assets/img/1218911.jpg) ;
+/*#banner{
     background-repeat:no-repeat;
     background-position: center center;  
+    background-attachment: fixed;
     background-size: cover;
-    padding-bottom: 50%;
-    min-height: 400px;
     
+    min-height: 400px;
+
 }
+*/
+
 
 #FotoPerfil{
 

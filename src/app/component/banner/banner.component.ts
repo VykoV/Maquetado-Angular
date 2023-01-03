@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+
 import { Subscription } from 'rxjs';
 import { Observable } from 'rxjs';
+import { persona } from 'src/app/component/model/persona.model';
+import { PersonaService } from 'src/app/component/Service/persona.service';
+import { TokenService } from '../Service/token.service';
 
 @Component({
   selector: 'app-banner',
@@ -9,15 +12,38 @@ import { Observable } from 'rxjs';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
+  
+  persona: persona[]=[];
 
-  miporfolio:any;
+  isLogged = false;
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(private personaService:PersonaService,
+              private tokenService:TokenService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      this.miporfolio=data;
-    });
+    this.verPersona();
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  verPersona():void {
+    this.personaService.lista().subscribe(data =>{
+      this.persona=data})
+  }
+
+  deletePersona(id?: number) {
+    if (id != undefined) {
+      this.personaService.delete(id).subscribe(
+        data => {
+          this.verPersona();
+      }, err => {
+        alert("No se pudo eliminar la persona");
+      }
+  )}
   }
 }
 

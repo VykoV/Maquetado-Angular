@@ -1,7 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+
 import { Subscription } from 'rxjs';
 import { Observable } from 'rxjs';
+import { HardSkillBackEnd } from '../model/HardSkillBackEnd';
+import { HardSkillFrontEnd } from '../model/HardSkillFrontEnd';
+import { SoftSkill } from '../model/SoftSkill';
+import { HardSkillBackEndService } from '../Service/hardskillbackend.service';
+import { HardSkillFrontEndService } from '../Service/hardskillfrontend.service';
+import { SoftSkillService } from '../Service/softskill.service';
+import { TokenService } from '../Service/token.service';
 
 @Component({
   selector: 'app-hard-and-soft-skills',
@@ -10,17 +17,76 @@ import { Observable } from 'rxjs';
 })
 export class HardAndSoftSkillsComponent implements OnInit {
   
-  skillFrontEnd:any;
-  skillBackEnd:any;
-  softSkill:any;
+  hardSkillFrontEnd:HardSkillFrontEnd[]=[];
+  hardSkillBackEnd:HardSkillBackEnd[]=[];
+  softSkill:SoftSkill[] = [];
+  
+  subscription = Subscription;
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  isLogged = false;
 
-  ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      this.skillFrontEnd=data.hardAndSoftSkills;
-      this.skillBackEnd=data.hardAndSoftSkills;
-      this.softSkill=data.hardAndSoftSkills;
-    });
+  constructor(private hardSkillFrontEndService:HardSkillFrontEndService,
+              private hardSkillBackEndService:HardSkillBackEndService,
+              private softSkillService:SoftSkillService,
+              private tokenService: TokenService) { }
+  
+    ngOnInit(): void {
+      this.verHardSkillFrontEnd();
+      this.verHardSkillBackEnd();
+      this.verSoftSkill();
+
+      if (this.tokenService.getToken()) {
+        this.isLogged = true;
+      } else {
+        this.isLogged = false;
+      }
+
   }
+
+  verHardSkillFrontEnd():void{
+    this.hardSkillFrontEndService.lista().subscribe(data =>{
+    this.hardSkillFrontEnd=data})
+  }
+  deleteHardSkillFrontEnd(id?: number) {
+    if (id != undefined) {
+      this.hardSkillFrontEndService.delete(id).subscribe(
+        data => {
+          this.verHardSkillFrontEnd();
+      }, err => {
+        alert("No se pudo eliminar");
+      }
+  )}
+  }
+
+  verHardSkillBackEnd():void{
+    this.hardSkillBackEndService.lista().subscribe(data =>{
+    this.hardSkillBackEnd=data})
+  }
+  deleteHardSkillBackEnd(id?: number) {
+    if (id != undefined) {
+      this.hardSkillBackEndService.delete(id).subscribe(
+        data => {
+          this.verHardSkillBackEnd();
+      }, err => {
+        alert("No se pudo eliminar");
+      }
+  )}
+  }
+
+  verSoftSkill():void{
+    this.softSkillService.lista().subscribe(data =>{
+    this.softSkill=data})
+  }
+
+  deleteSoftSkill(id?: number) {
+    if (id != undefined) {
+      this.softSkillService.delete(id).subscribe(
+        data => {
+          this.verSoftSkill();
+      }, err => {
+        alert("No se pudo eliminar");
+      }
+  )}
+  }
+
 }
